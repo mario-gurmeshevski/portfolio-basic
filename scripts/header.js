@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM loaded, starting header fetch");
   loadHeader();
 });
 
@@ -30,10 +29,6 @@ function loadHeader() {
         if (window.themeUtils) {
           window.themeUtils.setupThemeToggle();
         }
-
-        console.log("Header loaded successfully");
-      } else {
-        console.error("Header placeholder element not found");
       }
     })
     .catch((error) => {
@@ -45,11 +40,6 @@ function setupActiveNavigation() {
   const currentFile =
     window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("#navigation a");
-
-  if (navLinks.length === 0) {
-    console.warn("No navigation links found");
-    return;
-  }
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
@@ -63,11 +53,8 @@ function setupActiveNavigation() {
       (currentFile === "index.html" && href === "index.html")
     ) {
       link.classList.add("active");
-      console.log(`Active link set for: ${href}`);
     }
   });
-
-  console.log(`Current file: ${currentFile}`);
 }
 
 window.headerUtils = {

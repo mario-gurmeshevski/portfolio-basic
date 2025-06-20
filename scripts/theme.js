@@ -28,7 +28,6 @@ function setupThemeToggle() {
       themeToggle.removeEventListener("click", toggleTheme);
       themeToggle.addEventListener("click", toggleTheme);
       updateToggleIcon();
-      console.log("Theme toggle setup complete");
     } else {
       setTimeout(checkForToggle, 100);
     }
