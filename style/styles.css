@@ -407,6 +407,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .top-1\/2 {
     top: 50%;
   }
@@ -684,9 +687,6 @@
   .border-blue-400 {
     border-color: var(--color-blue-400);
   }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
   .bg-blue-100 {
     background-color: var(--color-blue-100);
   }
@@ -919,9 +919,6 @@
   }
   .text-amber-400 {
     color: var(--color-amber-400);
-  }
-  .text-amber-800 {
-    color: var(--color-amber-800);
   }
   .text-blue-400 {
     color: var(--color-blue-400);
